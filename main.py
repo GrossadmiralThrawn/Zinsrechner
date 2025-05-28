@@ -5,7 +5,7 @@
 
 
 def calculate_interest(years, interest_rate, saving_rate):
-    actual_saldo = saving_rate * 12
+    actual_saldo = 0
     interest_pa = (interest_rate - 1) * 100
 
     for year in range(1, int(years) + 1):
@@ -20,13 +20,23 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    input_Years = int(input("Wie viele Jahre soll der Zins berechnet werden? \n"))
-    input_interestRate = int(input("Wie hoch ist der Zins in Prozent? \n"))
-    input_savingRate = int(input("Wie viel Geld soll pro Monat in € gespart werden? \n"))
-
     print_hi('Nutzer')
 
-    calculate_interest(input_Years, 1 + input_interestRate / 100, input_savingRate)
+    while True:
+        input_Years = int(input("Wie viele Jahre soll der Zins berechnet werden? \n"))
+        input_interestRate = int(input("Wie hoch ist der Zins in Prozent? \n"))
+        input_savingRate = int(input("Wie viel Geld soll pro Monat in € gespart werden? \n"))
+
+        calculate_interest(input_Years, 1 + input_interestRate / 100, input_savingRate)
+        print("------------------------------------------------------------------")
+
+        print("Willst du eine weitere Variante berechnen?")
+        response = input("ja/nein \n").lower().strip()
+
+        if response == "ja" or response == "Ja" or response == "JA" or response == "j" or response == "y" or response == "yes":
+            continue
+        else:
+            break
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 #76669.50€
