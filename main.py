@@ -47,6 +47,3 @@ if __name__ == '__main__':
         else:
             break
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-#76669.50€
-#95836.87€
