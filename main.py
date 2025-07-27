@@ -1,9 +1,3 @@
-# This is a sample Python script.
-
-# Press Umschalt+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
 def calculate_interest(years, interest_rate, saving_rate):
     actual_saldo = 0
     interest_pa = (interest_rate - 1) * 100
